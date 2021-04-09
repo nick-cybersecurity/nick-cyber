@@ -35,10 +35,10 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 
 | Name     | Function | IP Address | Operating System |
 |----------|----------|------------|------------------|
-| RedTeamVM | Gateway | 52.188.70.202   | Linux       |
+| RedTeamVM | Jumpbox | 52.188.70.202   | Linux       |
 | Web1     | DVWA  | 10.0.0.5   | Linux            |
 | Web2     | DVWA  | 10.0.0.6   | Linux            |
-| ELK      | ELK  |            | Linux            |
+| ELK      | ELK server |            | Linux            |
 
 ### Access Policies
 
@@ -70,10 +70,7 @@ The playbook implements the following tasks:
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-**Note**: The following image link needs to be updated. Replace `docker_ps_output.png` with the name of your screenshot image file.  
-
-
-![TODO: Update the path with the name of your screenshot of docker ps output](Images/docker_ps_output.png)
+Diagrams/Docker_ps_Output.jpg
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
