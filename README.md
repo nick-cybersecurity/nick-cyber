@@ -54,7 +54,7 @@ A summary of the access policies in place can be found in the table below.
 
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
-| Jump Box | Yes/No              | 10.0.0.1 10.0.0.2    |
+| LocalHost | No              | 173.238.163.6/32    |
 |          |                     |                      |
 |          |                     |                      |
 
@@ -64,7 +64,7 @@ Ansible was used to automate configuration of the ELK machine. No configuration 
 - What is the main advantage of automating configuration with Ansible? The main advantage of Ansible is how easy it is to setup and configure multiple machines with the same baseline.
 
 The playbook implements the following tasks:
-- Creates a new machine
+- Downloads Docker
 - Downloads and configures the ELK container.
 - ...
 
