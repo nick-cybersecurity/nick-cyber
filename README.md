@@ -38,7 +38,7 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 | RedTeamVM | Jumpbox | 52.188.70.202   | Linux       |
 | Web1     | DVWA  | 10.0.0.5   | Linux            |
 | Web2     | DVWA  | 10.0.0.6   | Linux            |
-| ELK      | ELK server |            | Linux            |
+| ELK      | ELK server | 10.1.0.4           | Linux            |
 
 ### Access Policies
 
