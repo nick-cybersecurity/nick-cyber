@@ -54,7 +54,7 @@ A summary of the access policies in place can be found in the table below.
 
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
-| LocalHost | No              | 173.238.163.6/32    |
+| LocalHost | No              | 173.238.***.*/32    |
 |          |                     |                      |
 |          |                     |                      |
 
