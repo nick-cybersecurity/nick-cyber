@@ -2,13 +2,13 @@
 
 The files in this repository were used to configure the network depicted below.
 
-**Note**: The following image link needs to be updated. Replace `diagram_filename.png` with the name of your diagram image file.  
+![The Network Diagram](/Diagrams/NetworkDiagram.png)
 
-![TODO: Update the path with the name of your diagram](Images/diagram_filename.png)
+These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the yaml file may be used to install only certain pieces of it, such as Filebeat.
 
-These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the _____ file may be used to install only certain pieces of it, such as Filebeat.
-
-  - _TODO: Enter the playbook file._
+![Pentest Playbook](/Ansible/pentest.yml)
+![Filebeat Playbook](/Ansible/filebeat-playbook.yml)
+![ELK Playbook](/Ansible/install-elk.yml)
 
 This document contains the following details:
 - Description of the Topologu
@@ -31,7 +31,6 @@ Integrating an ELK server allows users to easily monitor the vulnerable VMs for 
 - What does Metricbeat record? Metricbeat records metrics from the operating system and from services running on the server, it then sends them to a place you specify.
 
 The configuration details of each machine may be found below.
-_Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
 
 | Name     | Function | IP Address | Operating System |
 |----------|----------|------------|------------------|
@@ -45,10 +44,12 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 The machines on the internal network are not exposed to the public Internet. 
 
 Only the RedTeamVM machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
+
 - 173.238.163.6/32
 
 Machines within the network can only be accessed by the jumpbox.
-- _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_
+
+The ELK Machine is accessible to from the internet from my local host IP address. My local host IP can only access the dashboard at http://13.65.205.41:5601/app/kibana. Access from other IP addresses is only allowed through the RedTeam Security Group and the jump box virtual machine.  
 
 A summary of the access policies in place can be found in the table below.
 
@@ -60,8 +61,7 @@ A summary of the access policies in place can be found in the table below.
 
 ### Elk Configuration
 
-Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
-- What is the main advantage of automating configuration with Ansible? The main advantage of Ansible is how easy it is to setup and configure multiple machines with the same baseline.
+Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because of how easy it is to setup and configure multiple machines with the same baseline.
 
 The playbook implements the following tasks:
 - Downloads Docker
@@ -94,6 +94,6 @@ SSH into the control node and follow the steps below:
 _TODO: Answer the following questions to fill in the blanks:_
 - _Which file is the playbook? Where do you copy it?_
 - _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
-- _Which URL do you navigate to in order to check that the ELK server is running?
+- Which URL do you navigate to in order to check that the ELK server is running? I would check http://13.65.205.41:5601/app/kibana
 
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
